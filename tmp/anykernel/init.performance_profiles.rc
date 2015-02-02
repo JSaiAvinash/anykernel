@@ -11,8 +11,7 @@ on property:fku.perf.profile=0
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1026000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1026000
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1026000
-    write /sys/module/blu_plug/parameters/min_online 1
-    write /sys/module/blu_plug/parameters/max_online 2
+    write /sys/class/misc/mako_hotplug_control/load_threshold 100
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk 128000000
 
 # Balance (nash.Kernel defaults)
@@ -24,8 +23,7 @@ on property:fku.perf.profile=1
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1512000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1512000
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1512000
-    write /sys/module/blu_plug/parameters/min_online 1
-    write /sys/module/blu_plug/parameters/max_online 4
+    write /sys/class/misc/mako_hotplug_control/load_threshold 80
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk 400000000
 
 # Performance
@@ -37,6 +35,5 @@ on property:fku.perf.profile=2
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_max_freq 1512000
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq 1512000
     write /sys/devices/system/cpu/cpu3/cpufreq/scaling_max_freq 1512000
-    write /sys/module/blu_plug/parameters/min_online 4
-    write /sys/module/blu_plug/parameters/max_online 4
+    write /sys/class/misc/mako_hotplug_control/load_threshold 0
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk 400000000

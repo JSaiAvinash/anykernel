@@ -65,23 +65,6 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/elementalx/up_threshold_any_cpu_load 80
     write /sys/devices/system/cpu/cpufreq/elementalx/up_threshold_multi_core 80
 
-    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "blu_active"
-    write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "blu_active"
-    write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "blu_active"
-    write /sys/devices/system/cpu/cpu3/cpufreq/scaling_governor "blu_active"
-    write /sys/devices/system/cpu/cpufreq/blu_active/hispeed_freq 1026000
-    write /sys/devices/system/cpu/cpufreq/blu_active/go_hispeed_load 90
-    write /sys/devices/system/cpu/cpufreq/blu_active/sampling_down_factor 100000
-    write /sys/devices/system/cpu/cpufreq/blu_active/min_sample_time 40000
-    write /sys/devices/system/cpu/cpufreq/blu_active/timer_rate 40000
-    write /sys/devices/system/cpu/cpufreq/blu_active/above_hispeed_delay "20000 800000:40000 1300000:20000"
-    write /sys/devices/system/cpu/cpufreq/blu_active/boostpulse_duration 10000
-    write /sys/devices/system/cpu/cpufreq/blu_active/timer_slack 30000
-    write /sys/devices/system/cpu/cpufreq/blu_active/io_is_busy 1
-    write /sys/devices/system/cpu/cpufreq/blu_active/up_threshold_any_cpu_load 75
-    write /sys/devices/system/cpu/cpufreq/blu_active/sync_freq 1026000
-    write /sys/devices/system/cpu/cpufreq/blu_active/up_threshold_any_cpu_freq 1350000
-
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "ondemand"
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "ondemand"
     write /sys/devices/system/cpu/cpu2/cpufreq/scaling_governor "ondemand"
@@ -105,17 +88,6 @@ on property:sys.boot_completed=1
     write /sys/devices/system/cpu/cpufreq/interactive/timer_rate 60000
     write /sys/devices/system/cpu/cpufreq/interactive/input_boost_freq 1026000
     write /sys/devices/system/cpu/cpufreq/interactive/max_freq_hysteresis 100000
-
-    write /sys/module/blu_plug/parameters/up_timer_cnt 2
-    write /sys/module/blu_plug/parameters/down_timer_cnt 6
-    write /sys/module/blu_plug/parameters/up_threshold 80
-    write /sys/module/blu_plug/parameters/max_cores_screenoff 2
-
-    write /sys/module/msm_thermal/parameters/enabled "Y"
-    write /sys/module/msm_thermal/core_control/enabled 1
-    write /sys/module/msm_thermal/parameters/core_limit_temp_degC 65
-    write /sys/module/msm_thermal/parameters/limit_temp_degC 70
-    write /sys/module/msm_thermal/parameters/core_control_mask 12
 
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/pwrscale/trustzone/governor "simple"
     write /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/max_gpuclk 400000000 " >> init.mako.rc

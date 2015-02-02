@@ -6,7 +6,7 @@ cat << CTAG
 				title:"Info"
 			}},
 				{ SDescription:{
-					description:"These below tunables are blu_plug. Blu_plug is enabled BY DEFAULT. Don't mess with it and stop posting in the thread asking How to enable blu_plug."
+					description:"Use only one hotplug driver from the following options, using more than at the same time may cause unexpected behavior."
 				}},
 			`if [ -f "/system/bin/mpdecision" ]; then
 			MPDEC=\`ps | $BB grep mpdecision\`
